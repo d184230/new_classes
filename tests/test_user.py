@@ -1,6 +1,6 @@
 import unittest
 
-from prg_classes import UserClass, UserErrorInit
+from obj.user import UserClass, UserErrorInit
 
 
 class TestUserClass(unittest.TestCase):
@@ -35,7 +35,3 @@ class TestUserClass(unittest.TestCase):
             UserClass.from_user_marker('project_hash::vk_124::test')
         with self.assertRaises(UserErrorInit):
             UserClass.from_user_marker('project_hash::vk_124_12432')
-
-
-if __name__ == '__main__':
-    unittest.main()
